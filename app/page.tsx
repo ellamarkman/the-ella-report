@@ -1,65 +1,267 @@
 import Image from "next/image";
+import Link from "next/link";
+import "./globals.css";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
+    <main className="homePage">
+      <section className="hero">
+        <nav className="navigation">
+          <Link href="/" className="logo">
+            THE ELLA REPORT
+          </Link>
+
+          <div className="navLinks">
+            <Link href="/" className="activeNavLink">
+              Home
+            </Link>
+            <Link href="/about">About</Link>
+            <Link href="/projects">Projects</Link>
+            <Link href="/currents">Currents</Link>
+            <Link href="/reports">Issues</Link>
+          </div>
+        </nav>
+
+        <div className="heroContent">
+          <div className="heroMain">
+            <header className="heroHeading">
+              <h1>THE ELLA REPORT</h1>
+
+              <div
+                className="heroTopics"
+                aria-label="Sports, marketing, and culture"
+              >
+                <span className="topicLine" aria-hidden="true" />
+
+                <p>
+                  <span>Sports</span>
+                  <span aria-hidden="true">/</span>
+                  <span>Marketing</span>
+                  <span aria-hidden="true">/</span>
+                  <span>Culture</span>
+                </p>
+
+                <span className="topicLine" aria-hidden="true" />
+              </div>
+            </header>
+
+            <div className="heroIntroduction">
+              <p>
+                <span>
+                  Inside the projects, stories, and ideas I&apos;m paying
+                  attention to
+                </span>
+
+                <span>
+                  right now—through the lens of <em>Ella!</em>
+                </span>
+              </p>
+
+              <div className="heroButtons">
+                <Link href="/reports/issue-1" className="primaryButton">
+                  <span>View the latest issue</span>
+                  <span aria-hidden="true">↗</span>
+                </Link>
+
+                <Link href="/projects" className="secondaryButton">
+                  <span>Explore my projects</span>
+                  <span aria-hidden="true">↗</span>
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <aside className="heroConnect">
             <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              href="https://www.linkedin.com/in/ellamarkman"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="portraitLink"
+              aria-label="Visit Ella Markman's LinkedIn profile"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+              <div className="portraitFrame">
+                <div className="portraitInner">
+                  <Image
+                    src="/images/about/linkedin.png"
+                    alt="Ella Markman"
+                    fill
+                    priority
+                    sizes="(max-width: 600px) 195px, 275px"
+                  />
+                </div>
+              </div>
+            </a>
+
+            <div className="connectText">
+              <p>LET&apos;S CONNECT</p>
+
+              <a
+                href="https://www.linkedin.com/in/ellamarkman"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </aside>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+
+        <div className="heroFooter">
+          <p>Marketing Editorial Portfolio</p>
+          <p>Sports · Marketing · Culture</p>
+        </div>
+      </section>
+
+      <section className="marquee" aria-label="Areas of interest">
+        <p>
+          PARTNERSHIPS • EXPERIENCES • CREATORS • SPORTS • CULTURE • EVENTS •
+          BRAND STRATEGY • PARTNERSHIPS • EXPERIENCES • CREATORS • SPORTS •
+          CULTURE • EVENTS • BRAND STRATEGY • PARTNERSHIPS • EXPERIENCES •
+          CREATORS • SPORTS • CULTURE • EVENTS • BRAND STRATEGY •
+        </p>
+      </section>
+
+      <section className="contentSection latestIssueSection">
+        <div className="sectionHeading">
+          <p className="sectionNumber">01</p>
+          <p className="sectionLabel">LATEST ISSUE</p>
+        </div>
+
+        <div className="featuredGrid">
+          <Link
+            href="/reports/issue-1"
+            className="featuredImage"
+            aria-label="Read Issue 1 of The Ella Report"
+          >
+            <span>THE ELLA REPORT</span>
+          </Link>
+
+          <div className="featuredStory">
+            <p className="category">ISSUE #1</p>
+
+            <h2>Welcome to The Ella Report!</h2>
+
+            <p>
+              An introduction to the stories, projects, perspectives, and ideas
+              behind The Ella Report—and what you can expect to find here.
+            </p>
+
+            <Link href="/reports/issue-1" className="textLink">
+              Read Issue #1 <span aria-hidden="true">→</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="contentSection darkSection">
+        <div className="sectionHeading">
+          <p className="sectionNumber">02</p>
+          <p className="sectionLabel">CURRENTS</p>
+        </div>
+
+        <div className="currentsGrid">
+          <article>
+            <p className="currentType">LISTENING</p>
+            <h3>Ella&apos;s Top Ten</h3>
+            <p>A weekly soundtrack powered by Spotify.</p>
+          </article>
+
+          <article>
+            <p className="currentType">EATING</p>
+            <h3>Beli Top Eats</h3>
+            <p>The restaurants currently sitting at the top of my rankings.</p>
+          </article>
+
+          <article>
+            <p className="currentType">WATCHING</p>
+            <h3>Moment of the Week</h3>
+            <p>The sports and entertainment moments holding my attention.</p>
+          </article>
+
+          <article>
+            <p className="currentType">NOTICING</p>
+            <h3>Campaign of the Week</h3>
+            <p>One marketing idea worth stopping and studying.</p>
+          </article>
+        </div>
+
+        <Link href="/currents" className="lightLink">
+          See this week&apos;s currents <span aria-hidden="true">→</span>
+        </Link>
+      </section>
+
+      <section className="contentSection">
+        <div className="sectionHeading">
+          <p className="sectionNumber">03</p>
+          <p className="sectionLabel">PROJECTS</p>
+        </div>
+
+        <div className="homeProjectGrid">
+          <article className="homeProjectCard">
+            <div className="homeProjectImage">01</div>
+            <p className="category">PARTNERSHIPS + EXPERIENTIAL</p>
+            <h3>GW Program Board</h3>
+            <p>
+              Building sponsorship strategy and bringing major brand
+              activations directly to students.
+            </p>
+          </article>
+
+          <article className="homeProjectCard">
+            <div className="homeProjectImage">02</div>
+            <p className="category">FESTIVAL MARKETING</p>
+            <h3>Windy City Smokeout</h3>
+            <p>
+              Evaluating partners and turning sponsorships into memorable
+              festival experiences.
+            </p>
+          </article>
+
+          <article className="homeProjectCard">
+            <div className="homeProjectImage">03</div>
+            <p className="category">CAMPAIGN STRATEGY</p>
+            <h3>Live Nation</h3>
+            <p>
+              Developing an integrated campaign through audience research,
+              strategy, media, and measurable goals.
+            </p>
+          </article>
+        </div>
+
+        <Link href="/projects" className="textLink">
+          View all projects <span aria-hidden="true">→</span>
+        </Link>
+      </section>
+
+      <footer className="homeFooter">
+        <div>
+          <p className="footerLogo">THE ELLA REPORT</p>
+          <p>Marketing editorial portfolio by Ella Markman.</p>
+        </div>
+
+        <div className="footerLinks">
+          <Link href="/about">About</Link>
+          <Link href="/projects">Projects</Link>
+          <Link href="/currents">Currents</Link>
+          <Link href="/reports">Issues</Link>
+        </div>
+
+        <div className="footerContact">
+          <p>LET&apos;S CONNECT</p>
+
+          <a href="mailto:ellammarkman@gmail.com">
+            ellammarkman@gmail.com
+          </a>
+
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="https://www.linkedin.com/in/ellamarkman"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
+            LinkedIn ↗
           </a>
         </div>
-      </main>
-    </div>
+      </footer>
+    </main>
   );
 }
