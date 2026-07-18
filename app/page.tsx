@@ -49,11 +49,11 @@ export default function Home() {
               <p>
                 <span>
                   Inside the projects, stories, and ideas I&apos;m paying
-                  attention to
+                  attention to 
                 </span>
 
                 <span>
-                  right now—through the lens of <em>Ella!</em>
+                   right now—through the lens of <em>Ella!</em>
                 </span>
               </p>
 

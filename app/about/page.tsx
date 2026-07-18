@@ -54,7 +54,7 @@ export default function AboutPage() {
           <Link href="/about">About</Link>
           <Link href="/projects">Projects</Link>
           <Link href="/currents">Currents</Link>
-          <Link href="/reports">Articles</Link>
+          <Link href="/reports">Issues</Link>
         </div>
       </nav>
 
@@ -186,7 +186,7 @@ export default function AboutPage() {
           <Link href="/about">About</Link>
           <Link href="/projects">Projects</Link>
           <Link href="/currents">Currents</Link>
-          <Link href="/reports">Articles</Link>
+          <Link href="/reports">Issues</Link>
         </div>
 
         <div className="footerContact">

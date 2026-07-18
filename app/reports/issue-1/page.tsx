@@ -1,4 +1,5 @@
 import Link from "next/link";
+import IssueInteractions from "./IssueInteractions";
 import "./issue.css";
 
 export default function IssueOnePage() {
@@ -14,7 +15,7 @@ export default function IssueOnePage() {
           <Link href="/about">About</Link>
           <Link href="/projects">Projects</Link>
           <Link href="/currently">Currents</Link>
-          <Link href="/reports">Articles</Link>
+          <Link href="/reports">Issues</Link>
         </div>
       </nav>
 
@@ -40,9 +41,7 @@ export default function IssueOnePage() {
         </header>
 
         <div className="issueBody">
-          <p className="issueOpening">
-            Welcome to The Ella Report.
-          </p>
+          <p className="issueOpening">Welcome to The Ella Report.</p>
 
           <p>
             If you know anything about me, you know I am constantly reading and
@@ -75,9 +74,7 @@ export default function IssueOnePage() {
             less like me talking at people and more like a conversation.
           </p>
 
-          <p>
-            Welcome to Issue #1, with plenty more to come.
-          </p>
+          <p>Welcome to Issue #1, with plenty more to come.</p>
 
           <section className="weeklyThoughts">
             <p className="weeklyLabel">TOP THOUGHTS OF THE WEEK</p>
@@ -112,40 +109,7 @@ export default function IssueOnePage() {
           </section>
         </div>
 
-        <section className="discussionSection">
-          <div className="discussionHeader">
-            <p>DISCUSSION</p>
-            <h2>Join the conversation.</h2>
-            <span>
-              Share your thoughts, reactions, or something I should cover next.
-            </span>
-          </div>
-
-          <form className="commentForm">
-            <label htmlFor="commentName">Name</label>
-            <input
-              id="commentName"
-              name="commentName"
-              type="text"
-              placeholder="Your name"
-            />
-
-            <label htmlFor="commentText">Comment</label>
-            <textarea
-              id="commentText"
-              name="commentText"
-              placeholder="Share your thoughts..."
-              rows={6}
-            />
-
-            <button type="submit">Post comment</button>
-          </form>
-
-          <div className="emptyComments">
-            <p>No comments yet.</p>
-            <span>Be the first to start the discussion.</span>
-          </div>
-        </section>
+        <IssueInteractions />
       </article>
 
       <footer className="issueFooter">

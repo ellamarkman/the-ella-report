@@ -1,4 +1,5 @@
 import Link from "next/link";
+import IssueInteractions from "./IssueInteractions";
 import "./issue.css";
 
 export default function IssueTwoPage() {
@@ -190,41 +191,7 @@ export default function IssueTwoPage() {
           </section>
         </div>
 
-        <section className="discussionSection">
-          <div className="discussionHeader">
-            <p>DISCUSSION</p>
-            <h2>Join the conversation.</h2>
-            <span>
-              Do you think Kalshi&apos;s strategy works, or did the creative miss
-              the mark?
-            </span>
-          </div>
-
-          <form className="commentForm">
-            <label htmlFor="commentName">Name</label>
-            <input
-              id="commentName"
-              name="commentName"
-              type="text"
-              placeholder="Your name"
-            />
-
-            <label htmlFor="commentText">Comment</label>
-            <textarea
-              id="commentText"
-              name="commentText"
-              placeholder="Share your thoughts..."
-              rows={6}
-            />
-
-            <button type="submit">Post comment</button>
-          </form>
-
-          <div className="emptyComments">
-            <p>No comments yet.</p>
-            <span>Be the first to start the discussion.</span>
-          </div>
-        </section>
+        <IssueInteractions />
       </article>
 
       <footer className="issueFooter">
