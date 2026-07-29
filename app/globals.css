@@ -162,7 +162,7 @@ a {
 }
 
 .heroIntroduction > p > span {
-  display: block;
+  display: inLine;
 }
 
 .heroIntroduction em {
@@ -620,32 +620,57 @@ a {
   letter-spacing: 0.13em;
 }
 
-/* =========================================================
+//* =========================================================
    RESPONSIVE
    ========================================================= */
 
-@media (max-width: 1250px) {
+/* Large laptops and smaller desktop windows */
+@media (max-width: 1400px) {
   .heroContent {
     min-height: auto;
-    padding-bottom: 60px;
+    padding: clamp(48px, 5vh, 68px) 0 60px;
   }
 
   .heroMain {
     width: 96%;
   }
 
+  .heroHeading h1 {
+    white-space: normal;
+    font-size: clamp(4.5rem, 8vw, 8rem);
+    line-height: 0.88;
+  }
+
+  .heroTopics {
+    width: min(850px, 78%);
+  }
+
   .heroIntroduction {
-    width: min(1000px, 90%);
+    width: min(950px, 92%);
+  }
+
+  .heroIntroduction > p {
+    font-size: clamp(2rem, 2.8vw, 3.2rem);
+    line-height: 1.08;
   }
 
   .heroIntroduction > p > span {
     display: inline;
   }
 
+  .heroIntroduction > p > span + span::before {
+    content: " ";
+  }
+
+  .heroButtons {
+    width: min(820px, 100%);
+    gap: 30px;
+  }
+
   .heroConnect {
     position: static;
     width: 100%;
-    margin-top: 60px;
+    margin-top: 58px;
   }
 
   .portraitFrame {
@@ -654,11 +679,21 @@ a {
   }
 
   .featuredGrid {
-    grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
+    grid-template-columns: minmax(0, 1.08fr) minmax(300px, 0.92fr);
+    gap: 44px;
+  }
+
+  .featuredStory h2 {
+    font-size: clamp(3rem, 4.6vw, 5rem);
   }
 }
 
-@media (max-width: 900px) {
+/* Smaller laptops */
+@media (max-width: 1100px) {
+  .hero {
+    min-height: auto;
+  }
+
   .navigation {
     align-items: flex-start;
   }
@@ -666,42 +701,154 @@ a {
   .navLinks {
     justify-content: flex-end;
     flex-wrap: wrap;
-    gap: 12px 20px;
+    gap: 12px 22px;
+  }
+
+  .heroContent {
+    padding-top: 58px;
   }
 
   .heroHeading h1 {
-    white-space: normal;
-    font-size: clamp(4rem, 12vw, 7.5rem);
+    font-size: clamp(4rem, 10vw, 7rem);
   }
 
   .heroTopics {
-    width: 90%;
+    width: min(760px, 88%);
+  }
+
+  .heroIntroduction {
+    width: min(850px, 96%);
+    margin-top: 34px;
+  }
+
+  .heroIntroduction > p {
+    font-size: clamp(2rem, 3.5vw, 3rem);
+  }
+
+  .heroButtons {
+    width: min(760px, 100%);
+    gap: 22px;
+    margin-top: 34px;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    min-height: 64px;
+    padding: 18px 22px;
+  }
+
+  .featuredGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .featuredImage {
+    min-height: 390px;
+  }
+
+  .featuredStory {
+    max-width: 720px;
+  }
+
+  .currentsGrid,
+  .homeProjectGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .homeFooter {
+    grid-template-columns: 1fr 0.8fr;
+  }
+
+  .footerContact {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Tablets */
+@media (max-width: 800px) {
+  .navigation {
+    gap: 24px;
+  }
+
+  .logo {
+    flex-shrink: 0;
+  }
+
+  .navLinks {
+    gap: 12px 18px;
+  }
+
+  .heroContent {
+    padding: 52px 0 48px;
+  }
+
+  .heroMain {
+    width: 100%;
+  }
+
+  .heroHeading h1 {
+    font-size: clamp(3.7rem, 12vw, 6rem);
+    line-height: 0.9;
+  }
+
+  .heroTopics {
+    width: 94%;
+    gap: 18px;
+  }
+
+  .heroTopics p {
+    gap: 13px;
+    font-size: 0.7rem;
+    letter-spacing: 0.17em;
   }
 
   .heroIntroduction {
     width: 100%;
+    margin-top: 32px;
+  }
+
+  .heroIntroduction > p {
+    font-size: clamp(2rem, 5.5vw, 2.8rem);
   }
 
   .heroButtons {
     grid-template-columns: 1fr;
     gap: 14px;
+    width: min(600px, 100%);
   }
 
-  .featuredGrid,
-  .homeFooter {
-    grid-template-columns: 1fr;
+  .heroConnect {
+    margin-top: 52px;
+  }
+
+  .heroFooter {
+    margin-top: 10px;
+  }
+
+  .contentSection {
+    padding: 74px 5vw;
+  }
+
+  .latestIssueSection {
+    padding-top: 66px;
+    padding-bottom: 66px;
   }
 
   .featuredImage {
-    min-height: 380px;
+    min-height: 350px;
   }
 
-  .currentsGrid,
-  .homeProjectGrid {
-    grid-template-columns: repeat(2, 1fr);
+  .homeFooter {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .footerContact {
+    grid-column: auto;
   }
 }
 
+/* Phones */
 @media (max-width: 600px) {
   .hero {
     min-height: auto;
@@ -710,20 +857,25 @@ a {
 
   .navigation {
     flex-direction: column;
+    align-items: flex-start;
     gap: 20px;
   }
 
   .navLinks {
     justify-content: flex-start;
+    gap: 10px 18px;
+  }
+
+  .navLinks a {
+    font-size: 0.82rem;
   }
 
   .heroContent {
     min-height: auto;
-    padding: 55px 0 45px;
+    padding: 52px 0 42px;
   }
 
   .heroHeading h1 {
-    white-space: normal;
     font-size: clamp(3rem, 15vw, 5rem);
     line-height: 0.9;
   }
@@ -748,30 +900,45 @@ a {
 
   .heroIntroduction {
     width: 100%;
-    margin-top: 32px;
+    margin-top: 30px;
   }
 
   .heroIntroduction > p {
     font-size: clamp(2rem, 9vw, 3rem);
+    line-height: 1.03;
   }
 
   .heroIntroduction > p > span {
     display: inline;
   }
 
+  .heroIntroduction > p > span + span::before {
+    content: " ";
+  }
+
+  .heroButtons {
+    margin-top: 30px;
+  }
+
   .primaryButton,
   .secondaryButton {
     width: 100%;
     min-height: 60px;
+    padding: 17px 20px;
+    font-size: 0.74rem;
   }
 
   .heroConnect {
-    margin-top: 50px;
+    margin-top: 48px;
   }
 
   .portraitFrame {
     width: 195px;
     height: 195px;
+  }
+
+  .connectText {
+    margin-top: 17px;
   }
 
   .connectText p {
@@ -786,6 +953,7 @@ a {
     align-items: flex-start;
     flex-direction: column;
     gap: 7px;
+    padding: 14px 0;
   }
 
   .marquee {
@@ -805,13 +973,26 @@ a {
     padding-bottom: 60px;
   }
 
+  .sectionHeading {
+    margin-bottom: 32px;
+  }
+
+  .featuredGrid {
+    gap: 34px;
+  }
+
   .featuredImage {
     min-height: 300px;
+    padding: 22px;
     font-size: clamp(2.7rem, 14vw, 4.5rem);
   }
 
   .featuredStory h2 {
     font-size: clamp(2.7rem, 13vw, 4.5rem);
+  }
+
+  .featuredStory > p:not(.category) {
+    font-size: 1rem;
   }
 
   .currentsGrid,
@@ -821,6 +1002,10 @@ a {
 
   .currentsGrid article {
     min-height: 245px;
+  }
+
+  .currentsGrid h3 {
+    margin-top: 62px;
   }
 
   .homeProjectImage {
@@ -833,11 +1018,17 @@ a {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
   .marquee p {
     animation: none;
   }
 
-  html {
-    scroll-behavior: auto;
+  .featuredImage,
+  .homeProjectImage,
+  .portraitFrame {
+    transition: none;
   }
 }
