@@ -53,12 +53,12 @@ export default function Home() {
                 </span>
 
                 <span>
-                   right now—through the lens of <em>Ella!</em>
+                   right now, through the lens of <em>Ella!</em>
                 </span>
               </p>
 
               <div className="heroButtons">
-                <Link href="/reports/issue-1" className="primaryButton">
+                <Link href="/reports/issue-5" className="primaryButton">
                   <span>View the latest issue</span>
                   <span aria-hidden="true">↗</span>
                 </Link>
@@ -129,25 +129,27 @@ export default function Home() {
 
         <div className="featuredGrid">
           <Link
-            href="/reports/issue-1"
+            href="/reports/issue-5"
             className="featuredImage"
-            aria-label="Read Issue 1 of The Ella Report"
+            aria-label="Read Issue 5 of The Ella Report"
           >
             <span>THE ELLA REPORT</span>
           </Link>
 
           <div className="featuredStory">
-            <p className="category">ISSUE #1</p>
+            <p className="category">ISSUE #05 · PARTNERSHIPS</p>
 
-            <h2>Welcome to The Ella Report!</h2>
+            <h2>The Best World Cup Partnerships</h2>
 
             <p>
-              An introduction to the stories, projects, perspectives, and ideas
-              behind The Ella Report—and what you can expect to find here.
+              The World Cup gives brands access to one of the largest audiences
+              in sports, but attention alone does not create a memorable
+              partnership. Three campaigns understood what makes the tournament
+              different.
             </p>
 
-            <Link href="/reports/issue-1" className="textLink">
-              Read Issue #1 <span aria-hidden="true">→</span>
+            <Link href="/reports/issue-5" className="textLink">
+              Read Issue #05 <span aria-hidden="true">→</span>
             </Link>
           </div>
         </div>
@@ -254,7 +256,7 @@ export default function Home() {
           </a>
 
           <a
-            href="https://www.linkedin.com/in/ellamarkman"
+            href="https://www.linkedin.com/in/ellammarkman"
             target="_blank"
             rel="noopener noreferrer"
           >

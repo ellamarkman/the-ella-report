@@ -1,0 +1,578 @@
+.issuePage {
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: #171717;
+  background: #f5f1e8;
+}
+
+.issueNav {
+  width: min(1220px, calc(100% - 64px));
+  margin: 0 auto;
+  padding: 28px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  border-bottom: 1px solid rgba(23, 23, 23, 0.24);
+}
+
+.issueLogo {
+  flex-shrink: 0;
+  color: inherit;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-decoration: none;
+}
+
+.issueNavLinks {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 30px;
+}
+
+.issueNavLinks a {
+  position: relative;
+  color: inherit;
+  font-size: 0.92rem;
+  text-decoration: none;
+}
+
+.issueNavLinks a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -6px;
+  left: 0;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 180ms ease;
+}
+
+.issueNavLinks a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.issueArticle {
+  width: min(1220px, calc(100% - 64px));
+  margin: 0 auto;
+}
+
+.issueHeader {
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 90px 0 70px;
+  border-bottom: 1px solid rgba(23, 23, 23, 0.24);
+}
+
+.issueMetaTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 34px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.issueHeader h1 {
+  max-width: 1000px;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(4.2rem, 8vw, 7.8rem);
+  font-weight: 400;
+  line-height: 0.92;
+  letter-spacing: -0.058em;
+  overflow-wrap: break-word;
+}
+
+.issueDek {
+  max-width: 760px;
+  margin: 38px 0 0;
+  font-size: clamp(1.1rem, 1.8vw, 1.3rem);
+  line-height: 1.68;
+  overflow-wrap: break-word;
+}
+
+.issueByline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 30px;
+  margin-top: 38px;
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.issueBody {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 78px 0 102px;
+}
+
+.issueBody p {
+  margin: 0 0 28px;
+  font-size: 1.14rem;
+  line-height: 1.88;
+  overflow-wrap: break-word;
+}
+
+.issueBody em {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.issueBody strong {
+  font-weight: 800;
+}
+
+.issueOpening {
+  margin-bottom: 36px !important;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.75rem, 3vw, 2.2rem) !important;
+  font-weight: 400;
+  line-height: 1.38 !important;
+  letter-spacing: -0.02em;
+}
+
+.issueOpening::first-letter {
+  float: left;
+  margin: 7px 10px 0 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 5.4rem;
+  line-height: 0.72;
+}
+
+.issueSection {
+  margin-top: 82px;
+}
+
+.issueSection:first-of-type {
+  margin-top: 90px;
+}
+
+.issueSectionLabel {
+  margin: 0 0 16px !important;
+  padding-top: 20px;
+  font-size: 0.75rem !important;
+  font-weight: 800;
+  line-height: 1.3 !important;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  border-top: 1px solid rgba(23, 23, 23, 0.32);
+}
+
+.issueSection h2 {
+  max-width: 690px;
+  margin: 0 0 34px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.55rem, 5vw, 4.25rem);
+  font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+  overflow-wrap: break-word;
+}
+
+.issuePullQuote {
+  width: min(940px, calc(100vw - 64px));
+  margin: 86px 50% 90px;
+  padding: 42px 0;
+  border-top: 1px solid rgba(23, 23, 23, 0.55);
+  border-bottom: 1px solid rgba(23, 23, 23, 0.55);
+  transform: translateX(-50%);
+}
+
+.issuePullQuote p {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 34px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.25rem, 5vw, 4.45rem);
+  font-weight: 400;
+  line-height: 1.04;
+  letter-spacing: -0.045em;
+  text-align: center;
+}
+
+.issueAnalysisBox {
+  width: min(880px, calc(100vw - 64px));
+  margin: 86px 50% 90px;
+  padding: 46px 52px 42px;
+  background: #fffdf8;
+  border: 1px solid rgba(23, 23, 23, 0.36);
+  box-sizing: border-box;
+  transform: translateX(-50%);
+}
+
+.issueAnalysisLabel {
+  margin: 0 0 22px !important;
+  font-size: 0.75rem !important;
+  font-weight: 800;
+  line-height: 1.3 !important;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+
+.issueAnalysisBox h3 {
+  max-width: 700px;
+  margin: 0 0 24px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 4vw, 3.35rem);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+}
+
+.issueAnalysisBox p:last-child {
+  margin-bottom: 0;
+  font-size: 1.05rem;
+  line-height: 1.78;
+}
+
+.issueClosing {
+  margin-top: 56px !important;
+  margin-bottom: 0 !important;
+  padding-top: 40px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 4vw, 3.4rem) !important;
+  line-height: 1.18 !important;
+  letter-spacing: -0.035em;
+  border-top: 1px solid rgba(23, 23, 23, 0.32);
+}
+
+.issueViewCount {
+  width: 100%;
+  max-width: 900px;
+  margin: -54px auto 42px;
+  color: rgba(23, 23, 23, 0.68);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-align: right;
+  text-transform: uppercase;
+}.discussionSection {
+  width: 100%;
+  max-width: 920px;
+  margin: 0 auto 120px;
+  padding: 56px;
+  background: #fffdf8;
+  border: 1px solid rgba(23, 23, 23, 0.24);
+  box-sizing: border-box;
+}
+
+.discussionHeader {
+  max-width: 700px;
+  margin-bottom: 42px;
+}
+
+.discussionHeader > p {
+  margin: 0 0 14px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.discussionHeader h2 {
+  margin: 0 0 16px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.6rem, 5vw, 4.8rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.discussionHeader span {
+  display: block;
+  max-width: 620px;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.commentForm {
+  display: grid;
+  gap: 10px;
+}
+
+.commentForm label {
+  margin-top: 14px;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.commentForm input,
+.commentForm textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 18px 0;
+  color: #171717;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid rgba(23, 23, 23, 0.3);
+  border-radius: 0;
+  font: inherit;
+  outline: none;
+}
+
+.commentForm input:focus,
+.commentForm textarea:focus {
+  border-bottom-color: #171717;
+}
+
+.commentForm textarea {
+  resize: vertical;
+}
+
+.commentForm button {
+  width: fit-content;
+  margin-top: 26px;
+  padding: 14px 24px;
+  color: #f5f1e8;
+  background: #171717;
+  border: 1px solid #171717;
+  font-size: .86rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: .2s ease;
+}
+
+.commentForm button:hover {
+  background: transparent;
+  color: #171717;
+}
+
+.commentMessage {
+  margin-top: 16px;
+  font-size: .92rem;
+  font-weight: 700;
+}
+
+.commentsList {
+  margin-top: 60px;
+}
+
+.commentCard {
+  padding: 26px 0;
+  border-top: 1px solid rgba(23,23,23,.15);
+}
+
+.commentCard:last-child {
+  border-bottom: 1px solid rgba(23,23,23,.15);
+}
+
+.commentCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 16px;
+}
+
+.commentCardHeader strong {
+  font-size: .96rem;
+}
+
+.commentCardHeader time {
+  color: rgba(23,23,23,.6);
+  font-size: .8rem;
+}
+
+.commentCard p {
+  margin: 0;
+  font-size: 1.04rem;
+  line-height: 1.75;
+}
+
+.emptyComments {
+  margin-top: 46px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(23,23,23,.15);
+}
+
+.emptyComments p {
+  margin: 0 0 8px;
+  font-weight: 800;
+}
+
+.emptyComments span {
+  color: rgba(23,23,23,.7);
+}
+
+.issueFooter {
+  width: min(1220px, calc(100% - 64px));
+  margin: 0 auto;
+  padding: 46px 0 56px;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 44px;
+  border-top: 1px solid rgba(23,23,23,.24);
+}
+
+.issueFooterLogo,
+.issueFooterLabel {
+  font-size: .76rem;
+  font-weight: 800;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+
+.issueFooter span,
+.issueFooter a {
+  color: inherit;
+  font-size: .92rem;
+  line-height: 1.7;
+  text-decoration: none;
+}
+
+.issueFooterLinks {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 12px 22px;
+}
+
+.issueFooterLinks a {
+  position: relative;
+}
+
+.issueFooterLinks a::after,
+.issueFooter > div:last-child a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform .18s ease;
+}
+
+.issueFooterLinks a:hover::after,
+.issueFooter > div:last-child a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+@media (max-width: 900px) {
+
+  .issuePullQuote,
+  .issueAnalysisBox {
+    width: 100%;
+    margin: 70px 0;
+    transform: none;
+  }
+
+  .discussionSection {
+    padding: 38px;
+  }
+
+  .issueFooter {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .issueNav,
+  .issueArticle,
+  .issueFooter {
+    width: min(100% - 36px, 1220px);
+  }
+
+  .issueNav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 22px 0;
+  }
+
+  .issueNavLinks {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px 18px;
+  }
+
+  .issueHeader {
+    padding: 60px 0 44px;
+  }
+
+  .issueMetaTop {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .issueHeader h1 {
+    font-size: clamp(3rem, 16vw, 5rem);
+    line-height: .98;
+  }
+
+  .issueDek {
+    font-size: 1.05rem;
+  }
+
+  .issueBody {
+    padding: 54px 0 72px;
+  }
+
+  .issueBody p {
+    font-size: 1.05rem;
+    line-height: 1.78;
+  }
+
+  .issueOpening::first-letter {
+    font-size: 4rem;
+    margin-right: 8px;
+  }
+
+  .issueSection {
+    margin-top: 60px;
+  }
+
+  .issueSection h2 {
+    font-size: clamp(2rem, 10vw, 3rem);
+    margin-bottom: 24px;
+  }
+
+  .issuePullQuote {
+    padding: 30px 0;
+  }
+
+  .issuePullQuote p {
+    padding: 0 18px;
+    font-size: clamp(1.8rem, 9vw, 2.8rem);
+  }
+
+  .issueAnalysisBox {
+    padding: 28px 22px;
+  }
+
+  .discussionSection {
+    margin-bottom: 80px;
+    padding: 28px 22px;
+  }
+
+  .discussionHeader h2 {
+    font-size: clamp(2.2rem, 12vw, 3.3rem);
+  }
+
+  .commentCardHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .issueFooter {
+    gap: 28px;
+  }
+}

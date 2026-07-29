@@ -1,7 +1,8 @@
 .issuesPage {
   min-height: 100vh;
-  background: #f5f1e8;
+  overflow-x: hidden;
   color: #141414;
+  background: #f5f1e8;
 }
 
 .issuesNav {
@@ -11,10 +12,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 32px;
   border-bottom: 1px solid rgba(20, 20, 20, 0.25);
 }
 
 .issuesLogo {
+  flex-shrink: 0;
   color: inherit;
   font-size: 1rem;
   font-weight: 800;
@@ -25,73 +28,167 @@
 .issuesNavLinks {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   gap: 30px;
 }
 
 .issuesNavLinks a {
+  position: relative;
   color: inherit;
   font-size: 0.92rem;
   text-decoration: none;
 }
 
-.issuesNavLinks a:hover {
-  text-decoration: underline;
-  text-underline-offset: 5px;
+.issuesNavLinks a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -6px;
+  left: 0;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 180ms ease;
+}
+
+.issuesNavLinks a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 .issuesHeader {
   width: min(1380px, calc(100% - 64px));
   margin: 0 auto;
-  padding: 100px 0 74px;
+  padding: 96px 0 82px;
   display: grid;
-  grid-template-columns: 0.85fr 2.15fr;
-  column-gap: 60px;
+  grid-template-columns: minmax(170px, 0.75fr) minmax(0, 2.25fr);
+  gap: 64px;
+  border-bottom: 1px solid rgba(20, 20, 20, 0.25);
 }
 
 .issuesEyebrow {
-  margin: 10px 0 0;
+  margin: 12px 0 0;
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.18em;
 }
 
+.issuesHeaderContent {
+  min-width: 0;
+}
+
 .issuesHeader h1 {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(3.7rem, 7vw, 7.6rem);
+  font-size: clamp(4rem, 7vw, 7.5rem);
   font-weight: 400;
   line-height: 0.93;
   letter-spacing: -0.055em;
+  overflow-wrap: break-word;
 }
 
 .issuesIntroduction {
-  grid-column: 2;
   max-width: 700px;
   margin: 38px 0 0;
   font-size: 1.18rem;
   line-height: 1.7;
 }
 
-.issuesGrid {
+.issuesArchive {
   width: min(1380px, calc(100% - 64px));
   margin: 0 auto;
-  padding-bottom: 110px;
+  padding: 66px 0 112px;
+}
+
+.issuesArchiveHeader {
+  margin-bottom: 28px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.issuesArchiveLabel {
+  margin: 0 0 10px;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.17em;
+}
+
+.issuesArchiveDescription {
+  max-width: 560px;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.issuesCarouselControls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.issuesCarouselControls button {
+  width: 48px;
+  height: 48px;
+  padding: 0;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
+  place-items: center;
+  color: #141414;
+  background: transparent;
+  border: 1px solid rgba(20, 20, 20, 0.5);
+  border-radius: 50%;
+  font: inherit;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition:
+    color 180ms ease,
+    background 180ms ease,
+    opacity 180ms ease;
+}
+
+.issuesCarouselControls button:hover:not(:disabled) {
+  color: #f5f1e8;
+  background: #141414;
+}
+
+.issuesCarouselControls button:disabled {
+  opacity: 0.25;
+  cursor: default;
+}
+
+.issuesCarousel {
+  width: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - 66px) / 4);
+  gap: 22px;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scroll-behavior: smooth;
+  scroll-snap-type: inline mandatory;
+  scrollbar-width: none;
+}
+
+.issuesCarousel::-webkit-scrollbar {
+  display: none;
 }
 
 .issueCard {
-  min-height: 470px;
-  padding: 28px;
+  min-width: 0;
+  min-height: 560px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   color: inherit;
   background: #fffdf8;
   border: 1px solid rgba(20, 20, 20, 0.25);
   text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  scroll-snap-align: start;
+  box-sizing: border-box;
   transition:
     transform 180ms ease,
     box-shadow 180ms ease;
@@ -99,58 +196,78 @@
 
 .issueCard:hover {
   transform: translateY(-6px);
-  box-shadow: 9px 9px 0 #141414;
+  box-shadow: 8px 8px 0 #141414;
 }
 
-.issueCardTop,
-.issueCardBottom {
+.issueCardTop {
+  min-height: 38px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
+  gap: 16px;
 }
 
 .issueNumber,
 .issueCategory {
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   font-weight: 800;
-  letter-spacing: 0.14em;
+  line-height: 1.35;
+  letter-spacing: 0.13em;
+}
+
+.issueCategory {
+  max-width: 130px;
+  text-align: right;
 }
 
 .issueCardContent {
-  max-width: 570px;
+  padding: 54px 0 40px;
 }
 
 .issueCardContent h2 {
   margin: 0 0 24px;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2.5rem, 4.2vw, 4.6rem);
+  font-size: clamp(2.25rem, 3.1vw, 3.85rem);
   font-weight: 400;
   line-height: 0.98;
   letter-spacing: -0.045em;
+  overflow-wrap: break-word;
 }
 
 .issueCardContent p {
-  max-width: 510px;
   margin: 0;
-  font-size: 1.02rem;
-  line-height: 1.65;
+  font-size: 0.96rem;
+  line-height: 1.68;
 }
 
 .issueCardBottom {
-  padding-top: 22px;
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
   border-top: 1px solid rgba(20, 20, 20, 0.2);
-  font-size: 0.9rem;
-  font-weight: 700;
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
+.issueCardBottom span:last-child {
+  font-size: 1.2rem;
+  transition: transform 180ms ease;
+}
+
+.issueCard:hover .issueCardBottom span:last-child {
+  transform: translateX(5px);
 }
 
 .issuesFooter {
   width: min(1380px, calc(100% - 64px));
   margin: 0 auto;
-  padding: 42px 0 52px;
-  border-top: 1px solid rgba(20, 20, 20, 0.25);
+  padding: 44px 0 54px;
   display: grid;
   grid-template-columns: 1.4fr 1fr 1fr;
   gap: 40px;
+  border-top: 1px solid rgba(20, 20, 20, 0.25);
 }
 
 .issuesFooter p {
@@ -178,14 +295,44 @@
   gap: 12px 24px;
 }
 
-.issuesFooterLinks a {
+.issuesFooterLinks a,
+.issuesFooter > div:last-child a {
+  position: relative;
   text-decoration: none;
 }
 
-.issuesFooterLinks a:hover,
-.issuesFooter > div:last-child a:hover {
-  text-decoration: underline;
-  text-underline-offset: 4px;
+.issuesFooterLinks a::after,
+.issuesFooter > div:last-child a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -4px;
+  left: 0;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 180ms ease;
+}
+
+.issuesFooterLinks a:hover::after,
+.issuesFooter > div:last-child a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+@media (max-width: 1150px) {
+  .issuesCarousel {
+    grid-auto-columns: calc((100% - 22px) / 2);
+  }
+
+  .issueCard {
+    min-height: 510px;
+  }
+
+  .issueCardContent h2 {
+    font-size: clamp(2.6rem, 5vw, 4.2rem);
+  }
 }
 
 @media (max-width: 850px) {
@@ -195,22 +342,19 @@
   }
 
   .issuesNavLinks {
-    gap: 12px;
     flex-wrap: wrap;
     justify-content: flex-end;
+    gap: 12px 20px;
   }
 
   .issuesHeader {
     grid-template-columns: 1fr;
+    gap: 22px;
     padding-top: 72px;
   }
 
-  .issuesIntroduction {
-    grid-column: 1;
-  }
-
-  .issuesGrid {
-    grid-template-columns: 1fr;
+  .issuesEyebrow {
+    margin-top: 0;
   }
 
   .issuesFooter {
@@ -218,28 +362,73 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .issuesNav,
   .issuesHeader,
-  .issuesGrid,
+  .issuesArchive,
   .issuesFooter {
     width: min(100% - 36px, 1380px);
   }
 
   .issuesNav {
+    padding: 22px 0;
     flex-direction: column;
+    align-items: flex-start;
   }
 
   .issuesNavLinks {
     justify-content: flex-start;
+    gap: 10px 18px;
   }
 
   .issuesHeader {
     padding: 56px 0 50px;
   }
 
+  .issuesHeader h1 {
+    font-size: clamp(3.2rem, 16vw, 5rem);
+    line-height: 0.96;
+  }
+
+  .issuesIntroduction {
+    margin-top: 28px;
+    font-size: 1.05rem;
+  }
+
+  .issuesArchive {
+    padding: 50px 0 78px;
+  }
+
+  .issuesArchiveHeader {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .issuesCarouselControls {
+    align-self: flex-end;
+  }
+
+  .issuesCarouselControls button {
+    width: 44px;
+    height: 44px;
+  }
+
+  .issuesCarousel {
+    grid-auto-columns: 88%;
+    gap: 16px;
+  }
+
   .issueCard {
-    min-height: 420px;
+    min-height: 500px;
     padding: 22px;
+  }
+
+  .issueCardContent h2 {
+    font-size: clamp(2.7rem, 12vw, 3.9rem);
+  }
+
+  .issuesFooter {
+    gap: 28px;
   }
 }
