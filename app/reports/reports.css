@@ -57,6 +57,8 @@
   transform-origin: left;
 }
 
+/* HEADER */
+
 .issuesHeader {
   width: min(1380px, calc(100% - 64px));
   margin: 0 auto;
@@ -96,6 +98,8 @@
   line-height: 1.7;
 }
 
+/* ARCHIVE */
+
 .issuesArchive {
   width: min(1380px, calc(100% - 64px));
   margin: 0 auto;
@@ -123,6 +127,8 @@
   font-size: 1rem;
   line-height: 1.65;
 }
+
+/* CAROUSEL CONTROLS */
 
 .issuesCarouselControls {
   display: flex;
@@ -159,6 +165,8 @@
   cursor: default;
 }
 
+/* ISSUES CAROUSEL */
+
 .issuesCarousel {
   width: 100%;
   display: grid;
@@ -176,9 +184,11 @@
   display: none;
 }
 
+/* ISSUE CARDS */
+
 .issueCard {
   min-width: 0;
-  min-height: 560px;
+  min-height: 580px;
   padding: 24px;
   display: flex;
   flex-direction: column;
@@ -200,7 +210,7 @@
 }
 
 .issueCardTop {
-  min-height: 38px;
+  min-height: 44px;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -215,28 +225,32 @@
   letter-spacing: 0.13em;
 }
 
+.issueNumber {
+  flex-shrink: 0;
+}
+
 .issueCategory {
-  max-width: 130px;
+  max-width: 145px;
   text-align: right;
 }
 
 .issueCardContent {
-  padding: 54px 0 40px;
+  padding: 48px 0 38px;
 }
 
 .issueCardContent h2 {
   margin: 0 0 24px;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2.25rem, 3.1vw, 3.85rem);
+  font-size: clamp(2.15rem, 2.8vw, 3.55rem);
   font-weight: 400;
-  line-height: 0.98;
+  line-height: 1;
   letter-spacing: -0.045em;
   overflow-wrap: break-word;
 }
 
 .issueCardContent p {
   margin: 0;
-  font-size: 0.96rem;
+  font-size: 0.94rem;
   line-height: 1.68;
 }
 
@@ -259,6 +273,8 @@
 .issueCard:hover .issueCardBottom span:last-child {
   transform: translateX(5px);
 }
+
+/* FOOTER */
 
 .issuesFooter {
   width: min(1380px, calc(100% - 64px));
@@ -321,19 +337,23 @@
   transform-origin: left;
 }
 
+/* SMALL DESKTOP / TABLET */
+
 @media (max-width: 1150px) {
   .issuesCarousel {
     grid-auto-columns: calc((100% - 22px) / 2);
   }
 
   .issueCard {
-    min-height: 510px;
+    min-height: 530px;
   }
 
   .issueCardContent h2 {
-    font-size: clamp(2.6rem, 5vw, 4.2rem);
+    font-size: clamp(2.5rem, 5vw, 4rem);
   }
 }
+
+/* TABLET */
 
 @media (max-width: 850px) {
   .issuesNav {
@@ -361,6 +381,8 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* MOBILE */
 
 @media (max-width: 650px) {
   .issuesNav,
@@ -420,12 +442,30 @@
   }
 
   .issueCard {
-    min-height: 500px;
+    min-height: 525px;
     padding: 22px;
   }
 
+  .issueCardTop {
+    min-height: 40px;
+  }
+
+  .issueCategory {
+    max-width: 125px;
+  }
+
+  .issueCardContent {
+    padding: 38px 0 30px;
+  }
+
   .issueCardContent h2 {
-    font-size: clamp(2.7rem, 12vw, 3.9rem);
+    font-size: clamp(2.35rem, 10.5vw, 3.45rem);
+    line-height: 1;
+  }
+
+  .issueCardContent p {
+    font-size: 0.93rem;
+    line-height: 1.62;
   }
 
   .issuesFooter {

@@ -6,13 +6,37 @@ import "./reports.css";
 
 const issues = [
   {
-  number: "05",
-  category: "PARTNERSHIPS",
-  title: "The Best World Cup Partnerships",
-  description:
-    "The World Cup gives brands access to one of the largest audiences in sports, but attention alone does not create a memorable partnership. Three campaigns understood what makes the tournament different.",
-  href: "/reports/issue-5",
-},
+    number: "08",
+    category: "PARTNERSHIPS",
+    title: "The Girl Group Identity Crisis: How Many Partnerships Is Too Many?",
+    description:
+      "KATSEYE has worked with some of the biggest brands in fashion, beauty, food, and entertainment. But when a group is constantly entering a new campaign, collaboration, and era, at what point does the brand start overpowering the artists?",
+    href: "/reports/issue-8",
+  },
+  {
+    number: "07",
+    category: "PERSONAL ESSAY",
+    title: "The Internet Doesn't Know Me That Well",
+    description:
+      "Building my own brand without posting my life online—and learning that maybe having a digital footprint doesn't mean sharing everything.",
+    href: "/reports/issue-7",
+  },
+  {
+    number: "06",
+    category: "MARKETING & PARTNERSHIPS",
+    title: "The SKIMS Playbook: Reinventing an Industry",
+    description:
+      "SKIMS didn't just enter the shapewear category. It helped change how an entire generation thought about it, then took that same playbook into culture, celebrity, sports, and sponsorships.",
+    href: "/reports/issue-6",
+  },
+  {
+    number: "05",
+    category: "PARTNERSHIPS",
+    title: "The Best World Cup Partnerships",
+    description:
+      "The World Cup gives brands access to one of the largest audiences in sports, but attention alone does not create a memorable partnership. Three campaigns understood what makes the tournament different.",
+    href: "/reports/issue-5",
+  },
   {
     number: "04",
     category: "MARKETING & CULTURE",
@@ -187,6 +211,7 @@ export default function ReportsPage() {
       <footer className="issuesFooter">
         <div>
           <p className="footerLogo">THE ELLA REPORT</p>
+
           <span>
             Sports, entertainment, culture, and the ideas behind them.
           </span>
@@ -202,6 +227,7 @@ export default function ReportsPage() {
 
         <div>
           <p className="footerLabel">LET&apos;S CONNECT</p>
+
           <a href="mailto:ellammarkman@gmail.com">
             ellammarkman@gmail.com
           </a>

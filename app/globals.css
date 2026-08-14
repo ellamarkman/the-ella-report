@@ -451,6 +451,7 @@ a {
   font-weight: 400;
   line-height: 0.9;
   letter-spacing: -0.055em;
+  overflow-wrap: break-word;
 }
 
 .featuredStory > p:not(.category) {
@@ -492,24 +493,26 @@ a {
 
 .currentsGrid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   border-top: 1px solid #3c3c3c;
   border-left: 1px solid #3c3c3c;
 }
 
 .currentsGrid article {
-  min-height: 270px;
-  padding: 27px;
+  min-width: 0;
+  min-height: 285px;
+  padding: 25px;
   border-right: 1px solid #3c3c3c;
   border-bottom: 1px solid #3c3c3c;
 }
 
 .currentsGrid h3 {
-  margin: 76px 0 15px;
+  margin: 70px 0 15px;
   font-family: var(--font-heading), Georgia, "Times New Roman", serif;
-  font-size: 2rem;
+  font-size: clamp(1.65rem, 2vw, 2rem);
   font-weight: 400;
   line-height: 1;
+  overflow-wrap: break-word;
 }
 
 .currentsGrid article > p:last-child {
@@ -692,6 +695,10 @@ a {
 
   .featuredStory h2 {
     font-size: clamp(3rem, 4.6vw, 5rem);
+  }
+
+  .currentsGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 

@@ -4,33 +4,6 @@ import Link from "next/link";
 import { useRef } from "react";
 import "./currently.css";
 
-const restaurants = [
-  {
-    rank: "01",
-    name: "Los Tacos",
-    location: "Carlsbad, California",
-    order: "Three Tacos with Rice and Beans",
-    note:
-      "I genuinely eat here at least once a week. Three tacos with rice and beans for only $15 is hard to beat, and the quality never disappoints. It has become one of my go-to lunch spots in North County.",
-  },
-  {
-    rank: "02",
-    name: "Kai Ola",
-    location: "Leucadia, California",
-    order: "Moonlight Roll",
-    note:
-      "A sushi spot I keep coming back to. Fresh fish, a relaxed atmosphere, and one of my favorite specialty rolls.",
-  },
-  {
-    rank: "03",
-    name: "Lola 67 Market",
-    location: "Carlsbad Village, California",
-    order: "Lunch Plate with a Carne Asada Taco and Enchilada",
-    note:
-      "A true hole-in-the-wall spot nestled inside a neighborhood market between the houses of Carlsbad Village. The food feels authentic, local, and deserving of far more attention.",
-  },
-];
-
 export default function CurrentlyPage() {
   const carouselRef = useRef<HTMLDivElement>(null);
 
@@ -83,7 +56,7 @@ export default function CurrentlyPage() {
             that earned a spot this week.
           </p>
 
-          <p className="currentsDate">Week of July 27, 2026</p>
+          <p className="currentsDate">Week of August 10, 2026</p>
         </div>
       </header>
 
@@ -138,7 +111,7 @@ export default function CurrentlyPage() {
 
               <a
                 className="externalButton"
-                href="https://open.spotify.com/playlist/7p2XCx4Isemc0TwQhm6VT1?si=79a8a78326c1458d"
+                href="https://open.spotify.com/playlist/7p2XCx4Isemc0TwQhm6VT1?si=fa568062e8c745b6"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -154,74 +127,106 @@ export default function CurrentlyPage() {
             </div>
 
             <div className="cardContent">
-              <h2>My Beli Top Eats</h2>
+              <h2>My Beli Top Eat</h2>
 
-              <p className="cardDescription">
-                The meals I would recommend from this week.
+              <p className="featureTitle">Birdseye Kitchen</p>
+
+              <p>
+                This week, the entire Beli section is dedicated to Birdseye
+                Kitchen. I went with my family and it has officially made its
+                way into my top three restaurants in San Diego.
               </p>
 
-              <div className="restaurantList">
-                {restaurants.map((restaurant) => (
-                  <div className="restaurantRow" key={restaurant.rank}>
-                    <p className="restaurantRank">{restaurant.rank}</p>
+              <p>
+                It&apos;s a small kitchen and one of those places where you
+                should probably walk in with three different options because,
+                depending on the day, they might be out of your first choice.
+                Honestly, that is part of what makes it so good.
+              </p>
 
-                    <div>
-                      <h3>{restaurant.name}</h3>
+              <div className="runnerUp">
+                <p className="runnerUpLabel">THE ORDER</p>
 
-                      <p className="restaurantLocation">
-                        {restaurant.location}
-                      </p>
+                <h3>Curry Mii Kati</h3>
+                <p>
+                  One of my favorites and an automatic order if they have it.
+                </p>
 
-                      <p className="restaurantOrder">{restaurant.order}</p>
+                <h3>Red Curry</h3>
+                <p>
+                  Another one I would order again without even looking at the
+                  rest of the menu.
+                </p>
 
-                      <p className="restaurantNote">{restaurant.note}</p>
-                    </div>
-                  </div>
-                ))}
+                <h3>Garlic Green Beans</h3>
+                <p>
+                  I&apos;m saying it. Better than Din Tai Fung&apos;s garlic
+                  green beans.
+                </p>
+
+                <h3>Thai Tea</h3>
+                <p>
+                  Obviously you need something to drink with all of the above.
+                </p>
               </div>
-
-              <p className="openSpots">
-                Spots four and five are still being earned.
-              </p>
             </div>
           </article>
 
           <article className="currentCard podcastCard">
             <div className="cardHeader">
               <p className="cardNumber">03</p>
-              <p className="cardCategory">IN MY EARS</p>
+              <p className="cardCategory">ON REPEAT</p>
             </div>
 
             <div className="cardContent">
-              <h2>Podcast of the Week</h2>
+              <h2>Throwback of the Week</h2>
 
               <p className="featureTitle">
-                Not Gonna Lie with Kylie Kelce
+                COMMENT SECTION: ALL STARS
               </p>
 
               <p>
-                This week&apos;s episode brings Kylie and Ilona Maher together
-                to talk about everything from Disneyland Paris and body image
-                to the Olympics and life inside the Olympic Village.
+                Ft. Brittany Broski and Caleb Hearon
               </p>
 
               <p>
-                I liked how naturally their personalities worked together. The
-                conversation was funny and casual, but it also made room for
-                more honest discussions about confidence, sports, and the
-                expectations placed on women.
+                I genuinely watch this episode at least once a month. You have
+                Drew Afualo, Brittany Broski, and Caleb Hearon all together,
+                three of my favorite names in pop culture, and it is genuinely
+                one of the funniest podcast episodes I have ever watched.
+              </p>
+
+              <p>
+                I already know what is coming and somehow still laugh every
+                single time. The three of them together are absolute chaos in
+                the best way possible.
+              </p>
+
+              <p>
+                This is also my reminder that something does not have to be new
+                to make the weekly draft. If I am still going back and watching
+                it this often, it deserves a spot.
               </p>
 
               <div className="spotifyEmbed episodeEmbed">
                 <iframe
-                  title="Not Gonna Lie with Kylie Kelce episode featuring Ilona Maher"
-                  src="https://open.spotify.com/embed/episode/1t2fUj3RkQLkkLBePPvAQO"
+                  title="Comment Section All Stars with Brittany Broski and Caleb Hearon"
+                  src="https://open.spotify.com/embed/episode/6SvoTCeke0w8ot5WoQw9qu"
                   width="100%"
                   height="232"
                   allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                   loading="lazy"
                 />
               </div>
+
+              <a
+                className="externalButton"
+                href="https://open.spotify.com/episode/6SvoTCeke0w8ot5WoQw9qu?si=5be604a932ab4aa1"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Listen on Spotify ↗
+              </a>
             </div>
           </article>
 
@@ -235,93 +240,106 @@ export default function CurrentlyPage() {
               <h2>Campaign of the Week</h2>
 
               <p className="featureTitle">
-                Gap Inc.&apos;s Employee Creator Program
+                Netflix&apos;s Living Billboard
               </p>
 
               <p>
-                Gap Inc. is expanding its creator and social advocacy program
-                to employees across Gap, Old Navy, Banana Republic, and Athleta.
-                Instead of looking only to outside influencers, the company is
-                giving its own employees an opportunity to become brand
-                creators.
+                How do you get people in Los Angeles to actually look up from
+                their phones? Apparently, you put a man inside a living room
+                30 feet above Sunset Boulevard.
               </p>
 
               <p>
-                What stood out to me is the internal focus. Employees already
-                understand the products, customers, and culture, which gives
-                them the potential to create content that feels more natural
-                than a traditional influencer partnership.
+                To promote <em>The Last House</em>, Netflix turned a billboard
+                into an actual living space with a person inside. Instead of
+                simply putting another movie poster over Sunset, they gave
+                people something weird enough to stop, stare at, photograph,
+                and send to someone else.
               </p>
 
               <p>
-                It also shows employees that the company values their voices
-                beyond their regular job responsibilities. Some of the most
-                believable brand advocates may already be working inside the
-                company.
+                That is what I love about this campaign. A billboard is one of
+                the oldest forms of advertising, but Netflix made the billboard
+                itself the entertainment. You did not even need to know what
+                was being promoted yet. First you wanted to know why there was
+                a man living above Sunset Boulevard.
               </p>
 
-              <a
-                className="externalButton"
-                href="https://www.retaildive.com/news/gap-inc-opens-creator-influencer-program-staff-employees/826238/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Read about the program ↗
-              </a>
+              <div className="runnerUp">
+                <p className="runnerUpLabel">WHY IT WORKED</p>
+
+                <h3>Curiosity did the advertising.</h3>
+
+                <p>
+                  The campaign gave people a reason to pull out their phones
+                  without asking them to. Once people started posting the
+                  billboard, the stunt stopped being limited to everyone who
+                  drove past it and became content for everyone else.
+                </p>
+              </div>
             </div>
           </article>
 
           <article className="currentCard momentCard">
             <div className="cardHeader">
               <p className="cardNumber">05</p>
-              <p className="cardCategory">THE BIG MOMENT</p>
+              <p className="cardCategory">WHAT CAUGHT MY ATTENTION</p>
             </div>
 
             <div className="cardContent">
-              <h2>What Caught My Attention</h2>
+              <h2>Don&apos;t Forget About the Players</h2>
 
-              <p className="featureTitle">San Diego Comic-Con</p>
-
-              <p>
-                Comic-Con once again transformed San Diego into the center of
-                entertainment. Even without a convention badge, fans could
-                experience major free activations, pop-ups, installations, and
-                branded events throughout the Gaslamp Quarter.
+              <p className="featureTitle">
+                JPMorganChase x Ohio State
               </p>
 
               <p>
-                Marvel also used the weekend to reveal more about the future of
-                its universe, including a new Black Panther film and additional
-                details surrounding Doctor Doom and Avengers: Doomsday. The
-                announcements quickly became some of the weekend&apos;s biggest
-                conversations.
+                When we talk about sports partnerships, so much of the
+                conversation is about the fan. How can a sponsor improve the
+                fan experience? What activation can they build? How can they
+                reach the people sitting in the stands?
               </p>
 
               <p>
-                What makes Comic-Con so interesting from a marketing
-                perspective is that the experience extends far beyond the
-                convention center. Studios compete for attention across the
-                entire city, turning fans into active participants instead of
-                simply showing them another trailer.
+                What caught my attention about JPMorganChase&apos;s partnership
+                with Ohio State is that it looks at another audience that
+                deserves just as much attention: the athletes actually playing
+                the game.
+              </p>
+
+              <p>
+                Along with becoming a major partner across Ohio State
+                athletics, the partnership includes a focus on financial
+                education for student-athletes. That feels especially relevant
+                in the NIL era, where college athletes can suddenly be earning
+                real money while they are still learning how to manage it.
+              </p>
+
+              <p>
+                It also makes sense for JPMorganChase beyond athletics. The
+                company already has a major recruiting presence on Ohio
+                State&apos;s campus, so the partnership connects athletics,
+                education, and future talent instead of existing only as a logo
+                in a stadium.
               </p>
 
               <div className="runnerUp">
-                <p className="runnerUpLabel">THE CONTROVERSY</p>
+                <p className="runnerUpLabel">THE BIGGER IDEA</p>
 
-                <h3>The Marvel Panel Access Debate</h3>
+                <h3>Players are an audience too.</h3>
 
                 <p>
-                  The Marvel conversation also received criticism after many
-                  fans with convention tickets were still unable to enter the
-                  highly anticipated panel. It showed the difficult balance
-                  between creating exclusivity and making major fan moments
-                  feel accessible to the people who traveled to attend.
+                  Sports partnerships do not always have to start and end with
+                  the fan. Sometimes the strongest partnership opportunity is
+                  creating something useful for the athletes, students, or
+                  communities that make the property valuable in the first
+                  place.
                 </p>
 
                 <p>
-                  Scarcity creates excitement, but it can also create negative
-                  attention when fans feel shut out of the experience they came
-                  to see.
+                  This one has me thinking about a future issue on how brands
+                  can build sponsorships around the players, not just the
+                  people watching them.
                 </p>
               </div>
             </div>

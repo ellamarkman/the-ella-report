@@ -49,16 +49,16 @@ export default function Home() {
               <p>
                 <span>
                   Inside the projects, stories, and ideas I&apos;m paying
-                  attention to 
+                  attention to
                 </span>
 
                 <span>
-                   right now, through the lens of <em>Ella!</em>
+                  right now, through the lens of <em>Ella!</em>
                 </span>
               </p>
 
               <div className="heroButtons">
-                <Link href="/reports/issue-5" className="primaryButton">
+                <Link href="/reports/issue-8" className="primaryButton">
                   <span>View the latest issue</span>
                   <span aria-hidden="true">↗</span>
                 </Link>
@@ -129,27 +129,29 @@ export default function Home() {
 
         <div className="featuredGrid">
           <Link
-            href="/reports/issue-5"
+            href="/reports/issue-8"
             className="featuredImage"
-            aria-label="Read Issue 5 of The Ella Report"
+            aria-label="Read Issue 8 of The Ella Report"
           >
             <span>THE ELLA REPORT</span>
           </Link>
 
           <div className="featuredStory">
-            <p className="category">ISSUE #05 · PARTNERSHIPS</p>
+            <p className="category">ISSUE #08 · PARTNERSHIPS</p>
 
-            <h2>The Best World Cup Partnerships</h2>
+            <h2>
+              The Girl Group Identity Crisis: How Many Partnerships Is Too Many?
+            </h2>
 
             <p>
-              The World Cup gives brands access to one of the largest audiences
-              in sports, but attention alone does not create a memorable
-              partnership. Three campaigns understood what makes the tournament
-              different.
+              KATSEYE has worked with major brands across fashion, beauty,
+              food, and entertainment. But when a group is constantly entering
+              a new campaign, collaboration, and era, at what point do the
+              partnerships start competing with the group&apos;s own identity?
             </p>
 
-            <Link href="/reports/issue-5" className="textLink">
-              Read Issue #05 <span aria-hidden="true">→</span>
+            <Link href="/reports/issue-8" className="textLink">
+              Read Issue #08 <span aria-hidden="true">→</span>
             </Link>
           </div>
         </div>
@@ -165,25 +167,43 @@ export default function Home() {
           <article>
             <p className="currentType">LISTENING</p>
             <h3>Ella&apos;s Top Ten</h3>
-            <p>A weekly soundtrack powered by Spotify.</p>
+            <p>The songs currently soundtracking my week.</p>
           </article>
 
           <article>
             <p className="currentType">EATING</p>
-            <h3>Beli Top Eats</h3>
-            <p>The restaurants currently sitting at the top of my rankings.</p>
+            <h3>Birdseye Kitchen</h3>
+            <p>
+              One of my new top three restaurants in San Diego, with an order
+              that deserves its own weekly spot.
+            </p>
           </article>
 
           <article>
-            <p className="currentType">WATCHING</p>
-            <h3>Moment of the Week</h3>
-            <p>The sports and entertainment moments holding my attention.</p>
+            <p className="currentType">ON REPEAT</p>
+            <h3>Comment Section: All Stars</h3>
+            <p>
+              Drew Afualo, Brittany Broski, and Caleb Hearon in one episode I
+              somehow still rewatch every month.
+            </p>
           </article>
 
           <article>
             <p className="currentType">NOTICING</p>
-            <h3>Campaign of the Week</h3>
-            <p>One marketing idea worth stopping and studying.</p>
+            <h3>Netflix&apos;s Living Billboard</h3>
+            <p>
+              Turning one of the oldest advertising formats into something
+              people actually stopped to watch.
+            </p>
+          </article>
+
+          <article>
+            <p className="currentType">CAUGHT MY ATTENTION</p>
+            <h3>JPMorganChase x Ohio State</h3>
+            <p>
+              A college sports partnership that thinks about what the deal can
+              do for the athletes, not only the fans.
+            </p>
           </article>
         </div>
 
