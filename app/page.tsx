@@ -58,7 +58,7 @@ export default function Home() {
               </p>
 
               <div className="heroButtons">
-                <Link href="/reports/issue-8" className="primaryButton">
+                <Link href="/reports/issue-10" className="primaryButton">
                   <span>View the latest issue</span>
                   <span aria-hidden="true">↗</span>
                 </Link>
@@ -129,29 +129,31 @@ export default function Home() {
 
         <div className="featuredGrid">
           <Link
-            href="/reports/issue-8"
+            href="/reports/issue-10"
             className="featuredImage"
-            aria-label="Read Issue 8 of The Ella Report"
+            aria-label="Read Issue 10 of The Ella Report"
           >
             <span>THE ELLA REPORT</span>
           </Link>
 
           <div className="featuredStory">
-            <p className="category">ISSUE #08 · PARTNERSHIPS</p>
+            <p className="category">
+              ISSUE #10 · PARTNERSHIPS + ENTERTAINMENT
+            </p>
 
             <h2>
-              The Girl Group Identity Crisis: How Many Partnerships Is Too Many?
+              The DWTS Playbook: Sponsorship Matchmaker for the Pros
             </h2>
 
             <p>
-              KATSEYE has worked with major brands across fashion, beauty,
-              food, and entertainment. But when a group is constantly entering
-              a new campaign, collaboration, and era, at what point do the
-              partnerships start competing with the group&apos;s own identity?
+              The pros of Dancing With the Stars have become brands of their
+              own. So I&apos;m playing sponsorship matchmaker and pairing ten
+              of them with the brands, campaigns, and activations I think fit
+              them best.
             </p>
 
-            <Link href="/reports/issue-8" className="textLink">
-              Read Issue #08 <span aria-hidden="true">→</span>
+            <Link href="/reports/issue-10" className="textLink">
+              Read Issue #10 <span aria-hidden="true">→</span>
             </Link>
           </div>
         </div>
@@ -189,20 +191,20 @@ export default function Home() {
           </article>
 
           <article>
-            <p className="currentType">NOTICING</p>
-            <h3>Netflix&apos;s Living Billboard</h3>
+            <p className="currentType">CAMPAIGN OF THE WEEK</p>
+            <h3>Walker Lyons x Dr Pepper</h3>
             <p>
-              Turning one of the oldest advertising formats into something
-              people actually stopped to watch.
+              A college athlete partnership that lets the athlete&apos;s
+              personality lead the creative.
             </p>
           </article>
 
           <article>
             <p className="currentType">CAUGHT MY ATTENTION</p>
-            <h3>JPMorganChase x Ohio State</h3>
+            <h3>College Jersey Patches</h3>
             <p>
-              A college sports partnership that thinks about what the deal can
-              do for the athletes, not only the fans.
+              College sports has a new piece of sponsorship inventory. Now
+              I&apos;m watching which brands actually earn the space.
             </p>
           </article>
         </div>

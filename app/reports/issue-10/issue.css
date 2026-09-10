@@ -1,0 +1,824 @@
+.issuePage {
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: #141414;
+  background: #f5f1e8;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.issueNav {
+  width: min(1180px, calc(100% - 64px));
+  margin: 0 auto;
+  padding: 28px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  border-bottom: 1px solid rgba(20, 20, 20, 0.25);
+}
+
+.issueLogo {
+  flex-shrink: 0;
+  color: inherit;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+}
+
+.issueNavLinks {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 30px;
+}
+
+.issueNavLinks a {
+  position: relative;
+  color: inherit;
+  font-size: 0.92rem;
+  text-decoration: none;
+}
+
+.issueNavLinks a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -6px;
+  left: 0;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 180ms ease;
+}
+
+.issueNavLinks a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+
+/* =========================
+   ARTICLE
+========================= */
+
+.issueArticle {
+  width: min(1180px, calc(100% - 64px));
+  margin: 0 auto;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.issueHeader {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 88px 0 72px;
+}
+
+.issueMetaTop {
+  margin-bottom: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.issueHeader h1 {
+  max-width: 1050px;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(4.2rem, 8vw, 7.8rem);
+  font-weight: 400;
+  line-height: 0.91;
+  letter-spacing: -0.058em;
+  overflow-wrap: break-word;
+}
+
+.issueHeader h1 em {
+  font-weight: 400;
+}
+
+.issueDek {
+  max-width: 740px;
+  margin: 40px 0 0 auto;
+  font-size: 1.22rem;
+  line-height: 1.7;
+}
+
+.issueByline {
+  margin-top: 42px;
+  padding-top: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 30px;
+  border-top: 1px solid rgba(20, 20, 20, 0.25);
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.issueIntro {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 82px 0 88px;
+}
+
+.issueIntro p {
+  margin: 0 0 26px;
+  font-size: 1.16rem;
+  line-height: 1.85;
+}
+
+.issueIntro p:last-child {
+  margin-bottom: 0;
+}
+
+.issueIntroOpening {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2rem !important;
+  line-height: 1.4 !important;
+}
+
+
+/* =========================
+   PLAYBOOK
+========================= */
+
+.playbookSection {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  border-top: 1px solid rgba(20, 20, 20, 0.3);
+}
+
+.proBlock {
+  padding: 78px 0 86px;
+  border-bottom: 1px solid rgba(20, 20, 20, 0.3);
+}
+
+.proTop {
+  display: grid;
+  grid-template-columns: 90px minmax(0, 1fr);
+  gap: 34px;
+  margin-bottom: 42px;
+}
+
+.proNumber {
+  margin: 7px 0 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 4.5rem;
+  font-weight: 400;
+  line-height: 0.85;
+  letter-spacing: -0.05em;
+}
+
+.proIdentity {
+  min-width: 0;
+}
+
+.proLabel {
+  margin: 0 0 10px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.proIdentity h2 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3.3rem, 6vw, 6.2rem);
+  font-weight: 400;
+  line-height: 0.94;
+  letter-spacing: -0.05em;
+  overflow-wrap: break-word;
+}
+
+
+/* =========================
+   PARTNERSHIP PITCH
+========================= */
+
+.partnershipPitch {
+  margin: 0 0 46px 124px;
+  padding: 26px 0;
+  display: grid;
+  grid-template-columns: minmax(160px, 0.65fr) minmax(0, 1.35fr);
+  gap: 32px;
+  border-top: 1px solid rgba(20, 20, 20, 0.22);
+  border-bottom: 1px solid rgba(20, 20, 20, 0.22);
+}
+
+.partnershipColumn {
+  min-width: 0;
+}
+
+.partnershipLabel {
+  margin: 0 0 9px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.partnershipBrand {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.partnershipTagline {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.7rem, 3vw, 2.7rem);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+}
+
+
+/* =========================
+   PRO COPY
+========================= */
+
+.proCopy {
+  max-width: 720px;
+  margin-left: 124px;
+}
+
+.proCopy p {
+  margin: 0 0 25px;
+  font-size: 1.12rem;
+  line-height: 1.82;
+}
+
+.proCopy p:last-child {
+  margin-bottom: 0;
+}
+
+.proCopy strong {
+  font-weight: 800;
+}
+
+.proCopy em {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+
+/* =========================
+   BONUS PARTNERSHIP
+========================= */
+
+.bonusPartnership {
+  max-width: 720px;
+  margin: 40px 0 0 124px;
+  padding: 28px 30px;
+  background: #fffdf8;
+  border: 1px solid rgba(20, 20, 20, 0.25);
+  box-sizing: border-box;
+}
+
+.bonusLabel {
+  margin: 0 0 10px !important;
+  font-size: 0.68rem !important;
+  font-weight: 800;
+  line-height: 1.4 !important;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.bonusPartnership h3 {
+  margin: 0 0 14px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.7rem, 3vw, 2.5rem);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.bonusPartnership p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+
+/* =========================
+   PLAYBOOK TAKEAWAY
+========================= */
+
+.playbookTakeaway {
+  width: 100%;
+  max-width: 1080px;
+  margin: 90px auto 100px;
+  padding: 64px;
+  color: #f5f1e8;
+  background: #141414;
+  box-sizing: border-box;
+}
+
+.takeawayLabel {
+  margin: 0 0 28px;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.playbookTakeaway h2 {
+  max-width: 850px;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3rem, 6vw, 6rem);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+}
+
+.takeawayCopy {
+  max-width: 720px;
+  margin-top: 38px;
+}
+
+.takeawayCopy p {
+  margin: 0 0 24px;
+  font-size: 1.08rem;
+  line-height: 1.75;
+}
+
+.takeawayCopy p:last-child {
+  margin-bottom: 0;
+}
+
+.takeawayStatement {
+  margin-top: 38px !important;
+  padding-top: 30px;
+  border-top: 1px solid rgba(245, 241, 232, 0.35);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.6rem, 3vw, 2.4rem) !important;
+  line-height: 1.3 !important;
+}
+
+
+/* =========================
+   NEXT PART
+========================= */
+
+.nextPart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 44px;
+  padding-top: 26px;
+  border-top: 1px solid rgba(245, 241, 232, 0.35);
+}
+
+.nextPart span:first-child {
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.nextPart span:last-child {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.3rem;
+  font-style: italic;
+}
+
+
+/* =========================
+   VIEW COUNT
+========================= */
+
+.issueViewCount {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 20px;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+
+/* =========================
+   DISCUSSION
+========================= */
+
+.discussionSection {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 110px;
+  padding: 54px;
+  background: #fffdf8;
+  border: 1px solid rgba(20, 20, 20, 0.25);
+  box-sizing: border-box;
+}
+
+.discussionHeader {
+  max-width: 680px;
+  margin-bottom: 38px;
+}
+
+.discussionHeader > p {
+  margin: 0 0 14px;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.discussionHeader h2 {
+  margin: 0 0 18px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.6rem, 5vw, 4.7rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.discussionHeader span {
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.commentForm {
+  display: grid;
+  gap: 10px;
+}
+
+.commentForm label {
+  margin-top: 12px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.commentForm input,
+.commentForm textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 16px 0;
+  color: #141414;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid rgba(20, 20, 20, 0.35);
+  border-radius: 0;
+  font: inherit;
+  outline: none;
+}
+
+.commentForm input:focus,
+.commentForm textarea:focus {
+  border-bottom-color: #141414;
+}
+
+.commentForm textarea {
+  resize: vertical;
+}
+
+.commentForm button {
+  width: fit-content;
+  margin-top: 22px;
+  padding: 13px 22px;
+  color: #f5f1e8;
+  background: #141414;
+  border: 1px solid #141414;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition:
+    color 180ms ease,
+    background 180ms ease;
+}
+
+.commentForm button:hover:not(:disabled) {
+  color: #141414;
+  background: transparent;
+}
+
+.commentForm button:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+
+.commentMessage {
+  margin: 10px 0 0;
+  font-size: 0.9rem;
+}
+
+.commentsList {
+  margin-top: 48px;
+}
+
+.emptyComments {
+  padding-top: 26px;
+  border-top: 1px solid rgba(20, 20, 20, 0.2);
+}
+
+.emptyComments p {
+  margin: 0 0 6px;
+  font-weight: 800;
+}
+
+.emptyComments span {
+  font-size: 0.92rem;
+}
+
+.commentCard {
+  padding: 26px 0;
+  border-top: 1px solid rgba(20, 20, 20, 0.2);
+}
+
+.commentCardHeader {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.commentCardHeader strong {
+  font-size: 0.92rem;
+}
+
+.commentCardHeader time {
+  flex-shrink: 0;
+  font-size: 0.76rem;
+  opacity: 0.65;
+}
+
+.commentCard > p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.issueFooter {
+  width: min(1180px, calc(100% - 64px));
+  margin: 0 auto;
+  padding: 42px 0 52px;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 40px;
+  border-top: 1px solid rgba(20, 20, 20, 0.25);
+}
+
+.issueFooter p {
+  margin-top: 0;
+}
+
+.issueFooterLogo,
+.issueFooterLabel {
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.issueFooter span,
+.issueFooter a {
+  color: inherit;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  overflow-wrap: break-word;
+}
+
+.issueFooterLinks {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 12px 24px;
+}
+
+.issueFooterLinks a,
+.issueFooter > div:last-child a {
+  text-decoration: none;
+}
+
+.issueFooterLinks a:hover,
+.issueFooter > div:last-child a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 850px) {
+  .issueNav {
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .issueNavLinks {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 12px 20px;
+  }
+
+  .proTop {
+    grid-template-columns: 72px minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  .proNumber {
+    font-size: 3.6rem;
+  }
+
+  .partnershipPitch,
+  .proCopy,
+  .bonusPartnership {
+    margin-left: 96px;
+  }
+
+  .playbookTakeaway {
+    padding: 48px;
+  }
+
+  .discussionSection {
+    padding: 38px;
+  }
+
+  .issueFooter {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .issueNav,
+  .issueArticle,
+  .issueFooter {
+    width: min(100% - 36px, 1180px);
+  }
+
+  .issueNav {
+    padding: 22px 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .issueNavLinks {
+    justify-content: flex-start;
+    gap: 10px 18px;
+  }
+
+  .issueHeader {
+    padding: 58px 0 48px;
+  }
+
+  .issueMetaTop {
+    margin-bottom: 26px;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .issueHeader h1 {
+    font-size: clamp(3.2rem, 15vw, 5rem);
+    line-height: 0.95;
+  }
+
+  .issueDek {
+    margin: 28px 0 0;
+    font-size: 1.06rem;
+    line-height: 1.65;
+  }
+
+  .issueByline {
+    margin-top: 30px;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .issueIntro {
+    padding: 54px 0 62px;
+  }
+
+  .issueIntro p {
+    font-size: 1.05rem;
+    line-height: 1.75;
+  }
+
+  .issueIntroOpening {
+    font-size: 1.6rem !important;
+  }
+
+  .proBlock {
+    padding: 52px 0 58px;
+  }
+
+  .proTop {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-bottom: 30px;
+  }
+
+  .proNumber {
+    margin: 0;
+    font-size: 3rem;
+  }
+
+  .proIdentity h2 {
+    font-size: clamp(3rem, 14vw, 4.5rem);
+  }
+
+  .partnershipPitch {
+    margin: 0 0 34px;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .partnershipTagline {
+    font-size: 1.8rem;
+  }
+
+  .proCopy,
+  .bonusPartnership {
+    margin-left: 0;
+  }
+
+  .proCopy p {
+    font-size: 1.04rem;
+    line-height: 1.75;
+  }
+
+  .bonusPartnership {
+    margin-top: 32px;
+    padding: 24px 22px;
+  }
+
+  .playbookTakeaway {
+    margin: 64px auto 72px;
+    padding: 34px 24px;
+  }
+
+  .playbookTakeaway h2 {
+    font-size: clamp(2.7rem, 13vw, 4rem);
+  }
+
+  .takeawayCopy p {
+    font-size: 1rem;
+  }
+
+  .nextPart {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .issueViewCount {
+    margin-bottom: 16px;
+  }
+
+  .discussionSection {
+    margin-bottom: 74px;
+    padding: 26px 22px;
+  }
+
+  .discussionHeader h2 {
+    font-size: clamp(2.4rem, 13vw, 3.5rem);
+  }
+
+  .commentCardHeader {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .issueFooter {
+    gap: 28px;
+  }
+}

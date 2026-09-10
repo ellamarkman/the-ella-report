@@ -6,6 +6,22 @@ import "./reports.css";
 
 const issues = [
   {
+    number: "10",
+    category: "PARTNERSHIPS + ENTERTAINMENT",
+    title: "The DWTS Playbook: Sponsorship Matchmaker for the Pros",
+    description:
+      "The pros of Dancing With the Stars have become brands of their own. So I’m playing sponsorship matchmaker and pairing ten of them with the brands, campaigns, and activations I think fit them best.",
+    href: "/reports/issue-10",
+  },
+  {
+    number: "09",
+    category: "PERSONAL ESSAY",
+    title: "I Have a Question for You",
+    description:
+      "A collection of questions I have saved over the years for friends,coworkers, and anyone willing to answer them, plus my own answers.",
+    href: "/reports/issue-9",
+  },
+  {
     number: "08",
     category: "PARTNERSHIPS",
     title: "The Girl Group Identity Crisis: How Many Partnerships Is Too Many?",
@@ -18,7 +34,7 @@ const issues = [
     category: "PERSONAL ESSAY",
     title: "The Internet Doesn't Know Me That Well",
     description:
-      "Building my own brand without posting my life online—and learning that maybe having a digital footprint doesn't mean sharing everything.",
+      "Building my own brand without posting my life online and learning that maybe having a digital footprint doesn't mean sharing everything.",
     href: "/reports/issue-7",
   },
   {
@@ -156,6 +172,7 @@ export default function ReportsPage() {
         <div className="issuesArchiveHeader">
           <div>
             <p className="issuesArchiveLabel">ALL ISSUES</p>
+
             <p className="issuesArchiveDescription">
               Browse the complete collection, beginning with the latest issue.
             </p>

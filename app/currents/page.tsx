@@ -56,7 +56,7 @@ export default function CurrentlyPage() {
             that earned a spot this week.
           </p>
 
-          <p className="currentsDate">Week of August 10, 2026</p>
+          <p className="currentsDate">Week of September 7, 2026</p>
         </div>
       </header>
 
@@ -84,6 +84,8 @@ export default function CurrentlyPage() {
         </div>
 
         <div className="currentsCarousel" ref={carouselRef}>
+          {/* 01 - SPOTIFY */}
+
           <article className="currentCard musicCard">
             <div className="cardHeader">
               <p className="cardNumber">01</p>
@@ -119,6 +121,8 @@ export default function CurrentlyPage() {
               </a>
             </div>
           </article>
+
+          {/* 02 - FOOD */}
 
           <article className="currentCard foodCard">
             <div className="cardHeader">
@@ -172,6 +176,8 @@ export default function CurrentlyPage() {
             </div>
           </article>
 
+          {/* 03 - PODCAST */}
+
           <article className="currentCard podcastCard">
             <div className="cardHeader">
               <p className="cardNumber">03</p>
@@ -185,9 +191,7 @@ export default function CurrentlyPage() {
                 COMMENT SECTION: ALL STARS
               </p>
 
-              <p>
-                Ft. Brittany Broski and Caleb Hearon
-              </p>
+              <p>Ft. Brittany Broski and Caleb Hearon</p>
 
               <p>
                 I genuinely watch this episode at least once a month. You have
@@ -230,6 +234,8 @@ export default function CurrentlyPage() {
             </div>
           </article>
 
+          {/* 04 - CAMPAIGN */}
+
           <article className="currentCard campaignCard">
             <div className="cardHeader">
               <p className="cardNumber">04</p>
@@ -240,45 +246,57 @@ export default function CurrentlyPage() {
               <h2>Campaign of the Week</h2>
 
               <p className="featureTitle">
-                Netflix&apos;s Living Billboard
+                Walker Lyons x Dr Pepper
               </p>
 
               <p>
-                How do you get people in Los Angeles to actually look up from
-                their phones? Apparently, you put a man inside a living room
-                30 feet above Sunset Boulevard.
+                I love when an athlete partnership actually lets the athlete
+                have a personality. Walker Lyons&apos; Dr Pepper collab is
+                exactly the type of college partnership I want to see more of.
               </p>
 
               <p>
-                To promote <em>The Last House</em>, Netflix turned a billboard
-                into an actual living space with a person inside. Instead of
-                simply putting another movie poster over Sunset, they gave
-                people something weird enough to stop, stare at, photograph,
-                and send to someone else.
+                Dr Pepper already feels at home in college football, so the
+                brand does not need to spend the entire campaign convincing us
+                why it belongs there. Instead, it can have fun with the athlete
+                and create something that feels built for social rather than
+                taking a traditional commercial and shrinking it down for
+                Instagram.
               </p>
 
               <p>
-                That is what I love about this campaign. A billboard is one of
-                the oldest forms of advertising, but Netflix made the billboard
-                itself the entertainment. You did not even need to know what
-                was being promoted yet. First you wanted to know why there was
-                a man living above Sunset Boulevard.
+                That is what stood out to me here. Walker gets to show some
+                personality, Dr Pepper gets another natural entry point into
+                college football culture, and the product does not have to
+                overpower the content for you to remember who sponsored it.
               </p>
 
               <div className="runnerUp">
-                <p className="runnerUpLabel">WHY IT WORKED</p>
+                <p className="runnerUpLabel">WHY I LIKE IT</p>
 
-                <h3>Curiosity did the advertising.</h3>
+                <h3>Let the athlete be the creative.</h3>
 
                 <p>
-                  The campaign gave people a reason to pull out their phones
-                  without asking them to. Once people started posting the
-                  billboard, the stunt stopped being limited to everyone who
-                  drove past it and became content for everyone else.
+                  NIL gives brands access to athletes, but access alone does
+                  not make good content. The best partnerships figure out what
+                  makes the athlete entertaining in the first place and build
+                  around that instead of turning them into a spokesperson
+                  reading brand copy.
                 </p>
               </div>
+
+              <a
+                className="externalButton"
+                href="https://www.instagram.com/reels/Dc65WsOvkGb/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Watch the campaign ↗
+              </a>
             </div>
           </article>
+
+          {/* 05 - WHAT CAUGHT MY ATTENTION */}
 
           <article className="currentCard momentCard">
             <div className="cardHeader">
@@ -287,59 +305,53 @@ export default function CurrentlyPage() {
             </div>
 
             <div className="cardContent">
-              <h2>Don&apos;t Forget About the Players</h2>
+              <h2>College Jersey Patches Are Here</h2>
 
               <p className="featureTitle">
-                JPMorganChase x Ohio State
+                The Next Big Piece of College Sports Inventory
               </p>
 
               <p>
-                When we talk about sports partnerships, so much of the
-                conversation is about the fan. How can a sponsor improve the
-                fan experience? What activation can they build? How can they
-                reach the people sitting in the stands?
+                Last time I talked about college jersey patches,
+                JPMorganChase x Ohio State caught my attention because the
+                partnership went beyond putting a logo on a uniform. Now I am
+                watching the category itself.
               </p>
 
               <p>
-                What caught my attention about JPMorganChase&apos;s partnership
-                with Ohio State is that it looks at another audience that
-                deserves just as much attention: the athletes actually playing
-                the game.
+                College sports has officially opened up a completely new piece
+                of sponsorship inventory, and I think the interesting part is
+                going to be seeing what schools and brands actually do with it.
               </p>
 
               <p>
-                Along with becoming a major partner across Ohio State
-                athletics, the partnership includes a focus on financial
-                education for student-athletes. That feels especially relevant
-                in the NIL era, where college athletes can suddenly be earning
-                real money while they are still learning how to manage it.
+                A jersey is different from a sign in the stadium. It is on the
+                athlete, in every highlight, every photo, every social post,
+                and potentially some of the most memorable moments in a
+                school&apos;s season. That makes the visibility incredibly
+                valuable, but it also makes brand fit way more important.
               </p>
 
               <p>
-                It also makes sense for JPMorganChase beyond athletics. The
-                company already has a major recruiting presence on Ohio
-                State&apos;s campus, so the partnership connects athletics,
-                education, and future talent instead of existing only as a logo
-                in a stadium.
+                I do not want to see schools treat this like another empty
+                rectangle to sell to whoever writes the biggest check. The
+                partnerships I am most interested in are the ones where the
+                company already has a reason to be part of that school&apos;s
+                world, whether that is through the region, alumni, students,
+                recruiting, or an existing relationship with the university.
               </p>
 
               <div className="runnerUp">
-                <p className="runnerUpLabel">THE BIGGER IDEA</p>
+                <p className="runnerUpLabel">WHAT I&apos;M WATCHING</p>
 
-                <h3>Players are an audience too.</h3>
-
-                <p>
-                  Sports partnerships do not always have to start and end with
-                  the fan. Sometimes the strongest partnership opportunity is
-                  creating something useful for the athletes, students, or
-                  communities that make the property valuable in the first
-                  place.
-                </p>
+                <h3>Who earns the jersey?</h3>
 
                 <p>
-                  This one has me thinking about a future issue on how brands
-                  can build sponsorships around the players, not just the
-                  people watching them.
+                  The patch itself is only the beginning. I want to see which
+                  brands turn the placement into a larger partnership and which
+                  ones stop at logo exposure. The brands that can connect the
+                  jersey to athletes, students, fans, and the university itself
+                  are going to make this inventory much more interesting.
                 </p>
               </div>
             </div>
